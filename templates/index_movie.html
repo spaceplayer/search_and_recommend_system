@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{title |  upper}}</h1>
+{#    <ul>#}
+{#        {% for item in my_list %}#}
+{#        <li>{{item.id}}----{{item.value}}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+    {% for lis in my_list %}
+        <li style="">{{ loop.index }}</li>
+        <hr />
+        {% for item in lis %}
+
+            {% if loop.index==1 %}
+                <h4>{{ "电影名: "+item.get('value') }}</h4>
+            {% elif loop.index==2 %}
+                <h4>{{ "导演："+item.get('value') }}</h4>
+            {% elif loop.index==3 %}
+                <h4>{{ "演员: "+item.get('value') }}</h4>
+            {% elif loop.index==5 %}
+                <h4>{{"简介: " +item.get('value') }}</h4>
+            {% elif loop.index==4 %}
+                <a href={{item.get('value')}}>IMDB</a>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>

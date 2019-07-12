@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北航资源搜索引擎</title>
+</head>
+<body>
+    {% block head %}
+    <form action="{{ url_for('search_result') }}" method="post">
+        {{ form.publication.label }} {{ form.publication() }}
+        {{ form.choice }}
+        {{ form.submit }}
+    </form>
+    {% endblock %}
+
+    {% block content %}
+
+    {% endblock %}
+<h1>{{title |  upper}}</h1>
+{#    <ul>#}
+{#        {% for item in my_list %}#}
+{#        <li>{{item.id}}----{{item.value}}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+<h4>电影推荐</h4>
+{% for lis in movie_list %}
+    <li style="">{{ loop.index }}</li>
+    <hr />
+    {% for item in lis %}
+
+        {% if loop.index==1 %}
+            <h4>{{ "电影名: "+item.get('value') }}</h4>
+        {% elif loop.index==2 %}
+            <h4>{{ "导演："+item.get('value') }}</h4>
+        {% elif loop.index==3 %}
+            <h4>{{ "演员: "+item.get('value') }}</h4>
+        {% elif loop.index==5 %}
+            <h4>{{"简介: " +item.get('value') }}</h4>
+        {% elif loop.index==4 %}
+            <a href={{item.get('value')}}>IMDB</a>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+<h4>书籍推荐</h4>
+{% for lis in book_list %}
+    <li style="">{{ loop.index }}</li>
+    <hr />
+    {% for item in lis %}
+
+        {% if loop.index==1 %}
+            <h4>{{ "作品名: "+item.get('value') }}</h4>
+        {% elif loop.index==2 %}
+            <h4>{{ "作者："+item.get('value') }}</h4>
+        {% elif loop.index==3 %}
+            <h4>{{ "类型: "+item.get('value') }}</h4>
+        {% elif loop.index==5 %}
+            <h4>{{"摘要: " +item.get('value') }}</h4>
+        {% elif loop.index==4 %}
+            <a href={{item.get('value')}}>主页地址</a>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+<h4>游戏推荐</h4>
+
+{% for lis in game_list %}
+    <li style="">{{ loop.index }}</li>
+    <hr />
+    {% for item in lis %}
+
+            {% if loop.index==1 %}
+                <h4>{{ "作品名: "+item.get('value') }}</h4>
+            {% elif loop.index==3 %}
+                <h4>{{ "开发者："+item.get('value') }}</h4>
+            {% elif loop.index==4 %}
+                <h4>{{ "类型: "+item.get('value') }}</h4>
+            {% elif loop.index==5 %}
+                <h4>{{"摘要: " +item.get('value') }}</h4>
+            {% elif loop.index==2 %}
+                <a href={{item.get('value')}}>主页地址</a>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+</body>
+</html>
