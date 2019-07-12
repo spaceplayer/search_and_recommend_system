@@ -38,21 +38,21 @@
 
 ### 4.1 主页推荐模块
 
-![image-20190712223739891](/Users/zhengxinzhi/typora_img/知识工程大作业/image-20190712223739891.png)
+![image-20190712223739891](pic/image-20190712223739891.png)
 
-![image-20190712223750002](/Users/zhengxinzhi/typora_img/知识工程大作业/image-20190712223750002.png)
+![image-20190712223750002](pic/image-20190712223750002.png)
 
-![image-20190712223801254](/Users/zhengxinzhi/typora_img/知识工程大作业/image-20190712223801254.png)
+![image-20190712223801254](pic/image-20190712223801254.png)
 
-![image-20190712224158916](/Users/zhengxinzhi/typora_img/知识工程大作业/image-20190712224158916.png)
+![image-20190712224158916](pic/image-20190712224158916.png)
 
 ### 4.2 搜索结果展示
 
-![image-20190712223853130](/Users/zhengxinzhi/typora_img/知识工程大作业/image-20190712223853130.png)
+![image-20190712223853130](pic/image-20190712223853130.png)
 
-![image-20190712223903618](/Users/zhengxinzhi/typora_img/知识工程大作业/image-20190712223903618.png)
+![image-20190712223903618](pic/image-20190712223903618.png)
 
-![image-20190712224021032](/Users/zhengxinzhi/typora_img/知识工程大作业/image-20190712224021032.png)
+![image-20190712224021032](pic/image-20190712224021032.png)
 
 ## 五、总结
 
